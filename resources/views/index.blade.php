@@ -77,7 +77,7 @@ https://templatemo.com/tm-588-ebook-landing
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="/login" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
+                            <a href="/mulai" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
                                 <i class="btn-icon bi-cloud-download"></i>
                                 <span href="...\PPLARGO\login.php">Masuk</span><!-- duplicated above one for mobile -->
                             </a>

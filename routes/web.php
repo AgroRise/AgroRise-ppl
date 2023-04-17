@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\SigninController;
-use App\Http\Controllers\SigninpakarController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SignuppakarController;
 use Illuminate\Support\Facades\Route;
@@ -29,27 +28,28 @@ Route::get('/mulai', function () {
     return view('main');
 });
 
-
-// Route::get('/pakar', function () {
-//     return view('login');
-// });
-
 Route::get('/pakar', function () {
     return view('sesi/pakar');
 });
 
-// Route::get('/signup', function () {
-//     return view('signup');
-// });
-// Route::get('home', function () {
-//     return view('home/index');
-// });
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/profilepakar', function () {
+    return view('profilepakar');
+});
+
+Route::get('/keuntungan', function () {
+    return view('keuntungan');
+});
+
+Route::get('/pestisida', function () {
+    return view('pestisida');
+});
 
 route::get('/signin',[SigninController::class, 'index']);
 route::post('/signin',[SigninController::class, 'login']);
-
-route::get('/signinpakar',[SigninpakarController::class, 'index']);
-route::post('/signinpakar',[SigninpakarController::class, 'login']);
 
 route::get('/signup',[SignupController::class, 'index']);
 route::post('/signup',[SignupController::class, 'store']);
