@@ -1,4 +1,4 @@
-@extends('layout.pakar') 
+@extends('layout.sesi') 
 @section('title', 'signin')
 @section('content')
 <nav class="navbar navbar-expand-lg">
@@ -80,7 +80,7 @@
             </div>
             @enderror
             <input type="password" id="password" class="fadeIn third @error('password') is-invalid @enderror" name="password" placeholder="Password" required>
-            <input type="submit" class="fadeIn fourth" value="Daftar">
+            <input type="submit" class="fadeIn fourth" value="Login">
         </form>
     
         <!-- Remind Passowrd -->

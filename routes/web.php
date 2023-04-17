@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SigninController;
+use App\Http\Controllers\SigninpakarController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SignuppakarController;
 use Illuminate\Support\Facades\Route;
@@ -20,9 +21,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login', function () {
-    return view('loginmain');
+Route::get('/daftar', function () {
+    return view('signupmain');
 });
+
+Route::get('/mulai', function () {
+    return view('main');
+});
+
 
 // Route::get('/pakar', function () {
 //     return view('login');
@@ -41,6 +47,9 @@ Route::get('/pakar', function () {
 
 route::get('/signin',[SigninController::class, 'index']);
 route::post('/signin',[SigninController::class, 'login']);
+
+route::get('/signinpakar',[SigninpakarController::class, 'index']);
+route::post('/signinpakar',[SigninpakarController::class, 'login']);
 
 route::get('/signup',[SignupController::class, 'index']);
 route::post('/signup',[SignupController::class, 'store']);

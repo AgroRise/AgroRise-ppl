@@ -17,7 +17,11 @@ class SigninController extends Controller
             'email' => 'required|email:dns',
             'password' => 'required'
         ]);
-        if (Auth::attempt($credentials)){
+        if (Auth::guard('pakar')->attempt($credentials)){
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard');
+        }
+        if (Auth::guard('web')->attempt($credentials)){
             $request->session()->regenerate();
             return redirect()->intended('dashboard');
         }
